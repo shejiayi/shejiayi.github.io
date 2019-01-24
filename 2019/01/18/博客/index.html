@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="shiyi&#39;s blog">
 <meta property="og:description" content="前言其实很久之间就一直想要写博客，可是忙于干别的事情，计划也就搁置了。知道有gitpage后，就一直想要有一个个人的主页，在粗略的对比了许多博客框架后，感觉hexo还是比较容易上手，然后就花了两三天的时间捣鼓出了这个小小的博客。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-24T10:32:50.612Z">
+<meta property="og:updated_time" content="2019-01-24T14:25:50.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + gitpage搭建博客">
 <meta name="twitter:description" content="前言其实很久之间就一直想要写博客，可是忙于干别的事情，计划也就搁置了。知道有gitpage后，就一直想要有一个个人的主页，在粗略的对比了许多博客框架后，感觉hexo还是比较容易上手，然后就花了两三天的时间捣鼓出了这个小小的博客。">
@@ -422,8 +422,29 @@
 <h3 id="主题的选择"><a href="#主题的选择" class="headerlink" title="主题的选择"></a>主题的选择</h3><p>在hexo里还是有不少主题的，其中<strong>NexT</strong>是一个很受欢迎的主题，我个人也是非常喜欢next的简洁风格，所以我也是选择<strong>NexT</strong>作为我博客的主题。<br><strong>NexT</strong> 也有相应的文档，所以使用起来非常方便。</p>
 <h3 id="设置阅读全文"><a href="#设置阅读全文" class="headerlink" title="设置阅读全文"></a>设置阅读全文</h3><p>只需要在文章中使用 <code>&lt;!-- more --&gt;</code>即可进行截断文章，同时也会显示阅读全文。</p>
 <h3 id="gitpage的部署"><a href="#gitpage的部署" class="headerlink" title="gitpage的部署"></a>gitpage的部署</h3><p>首先需要一个git账号，官方有详细的文档说明。<br>在这里我趟了一个坑，使用主题后，一开始上传到子目录后，一直没有主题显示，而且也没有报错，然后找到资料说，在 官方配置文件 <u>.config.yml</u> 设置根路径才可以显示主题。</p>
+<h3 id="优化部署建站"><a href="#优化部署建站" class="headerlink" title="优化部署建站"></a>优化部署建站</h3><p>因为我们有可能在更新系统或者在别的电脑上更新博客，所以我在知乎上找到了一个文章。<br>思路就是新建一个分支，分别管理hexo生成的网站原始文件和存放生成的静态文件</p>
+<blockquote>
+<p>一、关于搭建的流程</p>
+<ol>
+<li>创建仓库；</li>
+<li>创建两个分支：master 与 hexo；</li>
+<li>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
+<li>使用 git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；</li>
+<li>在本地 <a href="http://xxx.github.io" target="_blank" rel="noopener">http://xxx.github.io</a> 文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</li>
+<li>修改_config.yml中的deploy参数，分支应为master；</li>
+<li>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；</li>
+<li>执行hexo g -d生成网站并部署到GitHub上。这样一来，在GitHub上的<a href="http://xxx.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美" target="_blank" rel="noopener">http://xxx.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美</a>( •̀ ω •́ )y！</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>二、关于日常的改动流程在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。</p>
+<ol>
+<li>依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；</li>
+<li>然后才执行hexo g -d发布网站到master分支上。</li>
+</ol>
+</blockquote>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>我也在慢慢摸索中~，</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官方文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT官方文档</a><br><a href="https://space.bilibili.com/362224537?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="noopener">b站up主视频教程</a></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官方文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT官方文档</a><br><a href="https://space.bilibili.com/362224537?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="noopener">b站up主视频教程</a><br><a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">知乎</a></p>
 
       
     </div>
@@ -609,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#起步"><span class="nav-number">2.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写博客基本流程"><span class="nav-number">3.</span> <span class="nav-text">写博客基本流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题的选择"><span class="nav-number">4.</span> <span class="nav-text">主题的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置阅读全文"><span class="nav-number">5.</span> <span class="nav-text">设置阅读全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitpage的部署"><span class="nav-number">6.</span> <span class="nav-text">gitpage的部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">7.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">8.</span> <span class="nav-text">引用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#起步"><span class="nav-number">2.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写博客基本流程"><span class="nav-number">3.</span> <span class="nav-text">写博客基本流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题的选择"><span class="nav-number">4.</span> <span class="nav-text">主题的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置阅读全文"><span class="nav-number">5.</span> <span class="nav-text">设置阅读全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitpage的部署"><span class="nav-number">6.</span> <span class="nav-text">gitpage的部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化部署建站"><span class="nav-number">7.</span> <span class="nav-text">优化部署建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">8.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">9.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
 
           </div>
