@@ -92,25 +92,25 @@
 
 
 
-  <meta name="description" content="1）前言ES6的学习笔记:最近在学习ES6，虽然之前也是有学习到面向对象以及模块化的处理，但是ES6提供的新特性更加能体现这几个方面的思想，它的代码更加简洁，其他还有更加强大的功能；不过es6还是存在着浏览器支持问题。">
-<meta name="keywords" content="笔记">
+  <meta name="description" content="HTML部分/CSS部分 三栏布局有几种实现方式，分别是什么，之间的优缺点  绝对定位：快捷，布局脱离文档流，可实用性小 浮动：要清理浮动。不过兼容性好 flex布局：移动端使用率高，css3新增属性，这种布局方式，高度由内容决定。 table布局：高度由内容绝对，table面临淘汰 gird布局：新技术   HTML5的新特性&amp;emsp;在语义化，增加了header/footer/nav/asi">
+<meta name="keywords" content="-前端 -面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="es6学习">
-<meta property="og:url" content="https://shejiayi.github.io/2019/01/28/es6学习/index.html">
+<meta property="og:title" content="前端面试题">
+<meta property="og:url" content="https://shejiayi.github.io/2019/02/17/前端面试题/index.html">
 <meta property="og:site_name" content="shiyi&#39;s blog">
-<meta property="og:description" content="1）前言ES6的学习笔记:最近在学习ES6，虽然之前也是有学习到面向对象以及模块化的处理，但是ES6提供的新特性更加能体现这几个方面的思想，它的代码更加简洁，其他还有更加强大的功能；不过es6还是存在着浏览器支持问题。">
+<meta property="og:description" content="HTML部分/CSS部分 三栏布局有几种实现方式，分别是什么，之间的优缺点  绝对定位：快捷，布局脱离文档流，可实用性小 浮动：要清理浮动。不过兼容性好 flex布局：移动端使用率高，css3新增属性，这种布局方式，高度由内容决定。 table布局：高度由内容绝对，table面临淘汰 gird布局：新技术   HTML5的新特性&amp;emsp;在语义化，增加了header/footer/nav/asi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-17T12:22:28.781Z">
+<meta property="og:updated_time" content="2019-02-17T14:02:33.506Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6学习">
-<meta name="twitter:description" content="1）前言ES6的学习笔记:最近在学习ES6，虽然之前也是有学习到面向对象以及模块化的处理，但是ES6提供的新特性更加能体现这几个方面的思想，它的代码更加简洁，其他还有更加强大的功能；不过es6还是存在着浏览器支持问题。">
+<meta name="twitter:title" content="前端面试题">
+<meta name="twitter:description" content="HTML部分/CSS部分 三栏布局有几种实现方式，分别是什么，之间的优缺点  绝对定位：快捷，布局脱离文档流，可实用性小 浮动：要清理浮动。不过兼容性好 flex布局：移动端使用率高，css3新增属性，这种布局方式，高度由内容决定。 table布局：高度由内容绝对，table面临淘汰 gird布局：新技术   HTML5的新特性&amp;emsp;在语义化，增加了header/footer/nav/asi">
 
 
 
 
 
 
-  <link rel="canonical" href="https://shejiayi.github.io/2019/01/28/es6学习/">
+  <link rel="canonical" href="https://shejiayi.github.io/2019/02/17/前端面试题/">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>es6学习 | shiyi's blog</title>
+  <title>前端面试题 | shiyi's blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shejiayi.github.io/2019/01/28/es6学习/">
+    <link itemprop="mainEntityOfPage" href="https://shejiayi.github.io/2019/02/17/前端面试题/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="十一">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">es6学习
+          <h1 class="post-title" itemprop="name headline">前端面试题
 
               
             
@@ -362,7 +362,7 @@
                 
               
 
-              <time title="创建时间：2019-01-28 13:21:12" itemprop="dateCreated datePublished" datetime="2019-01-28T13:21:12+08:00">2019-01-28</time>
+              <time title="创建时间：2019-02-17 20:21:35" itemprop="dateCreated datePublished" datetime="2019-02-17T20:21:35+08:00">2019-02-17</time>
             
 
             
@@ -415,34 +415,72 @@
       
 
       
-        <h3 id="1）前言"><a href="#1）前言" class="headerlink" title="1）前言"></a>1）前言</h3><p>ES6的学习笔记:最近在学习ES6，虽然之前也是有学习到面向对象以及模块化的处理，但是ES6提供的新特性更加能体现这几个方面的思想，它的代码更加简洁，其他还有更加强大的功能；不过es6还是存在着浏览器支持问题。<br><a id="more"></a></p>
-<h3 id="2）ES6的不同之处"><a href="#2）ES6的不同之处" class="headerlink" title="2）ES6的不同之处"></a>2）ES6的不同之处</h3><ol>
-<li>ES6引入了两个变量关键字，分别是 <code>let</code>和 <code>const</code>.<br>1.1 <code>let</code> 声明变量，这个变量的作用域就被限制在当前的代码块，语句或表达式之中.<br>1.2 <code>const</code> 通过<code>const</code>声明的变量是只读的。这意味着通过<code>const</code>声明的变量只能被赋值一次，而不能被再次赋值。<br>但是<code>const</code> 声明的对象（包括数组和函数）依然是可变的，只是不能直接赋值.<br><br></li>
-<li>虽然<code>const</code>声明不能保护数据不被改变，但是js提供了一个<code>Object.freeze</code>来防止数据的改变。<br><br></li>
-<li><p>箭头函数(Arrow)<br>通常我们的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  const myFunc = function() &#123;</span><br><span class="line">    const myVar = &quot;value&quot;;</span><br><span class="line">    return myVar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>改写之后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const myFunc =&gt; ()&#123;</span><br><span class="line">  const myVar = &quot;value&quot;;</span><br><span class="line">  return myVar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当不需要函数体，只要返回一个值的时候，箭头函数可以省略 <code>return</code>关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const myFunc =() =&gt; &quot;value&quot;;</span><br></pre></td></tr></table></figure>
+        <h3 id="HTML部分-CSS部分"><a href="#HTML部分-CSS部分" class="headerlink" title="HTML部分/CSS部分"></a>HTML部分/CSS部分</h3><ol>
+<li><p>三栏布局有几种实现方式，分别是什么，之间的优缺点</p>
+<ul>
+<li>绝对定位：快捷，布局脱离文档流，可实用性小</li>
+<li>浮动：要清理浮动。不过兼容性好</li>
+<li>flex布局：移动端使用率高，css3新增属性，这种布局方式，高度由内容决定。</li>
+<li>table布局：高度由内容绝对，table面临淘汰</li>
+<li>gird布局：新技术</li>
+</ul>
 </li>
-<li><p>设置函数的默认参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  function greeting(name = &quot;Anonymous&quot;) &#123;</span><br><span class="line">    return &quot;Hello &quot; + name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>HTML5的新特性<br><br>&emsp;在语义化，增加了header/footer/nav/aside/section/artice等标签，在表单方面，为了增强表单，为input增加color/email/date/range等类型。<br>&emsp;在存储方面提供了sessionStorage /localStorage和离线存储，通过这些存储方式方便数据在客户端的存储和获取。<br>&emsp;在多媒体方面规定了音频和视频元素audio和vedio； 另外还有地理定位、canvas画布、拖放、多线程编程的web workers和websocket协议;<br><br></p>
 </li>
-<li><p>rest操作符<br>rest操作符允许创建一个变量来接受多个参数的函数，这些参数被存储在一个函数内部可以读取的数组中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  function howMany(...args) &#123;</span><br><span class="line">    return &quot;You have passed &quot; + args.length + &quot; arguments.&quot;;</span><br><span class="line">&#125;</span><br><span class="line">console.log(howMany(0, 1, 2)); // 输出：You have passed 3 arguments.</span><br><span class="line">console.log(howMany(&quot;string&quot;, null, [1, 2, 3], &#123; &#125;)); // 输出：You have passed 4 arguments.</span><br></pre></td></tr></table></figure>
+<li><p>什么是盒子模型</p>
+<ul>
+<li>盒子模型有两种分别是<ul>
+<li>标准模型 （box-sizing:content-box）</li>
+<li>IE模型  (box-sizing:border-box)<br><br></li>
+</ul>
 </li>
-<li><p>解构赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ES5代码如下：</span><br><span class="line">  var voxel = &#123;x: 3.6, y: 7.4, z: 6.54 &#125;;</span><br><span class="line">  var x = voxel.x; // x = 3.6</span><br><span class="line">  var y = voxel.y; // y = 7.4</span><br><span class="line">  var z = voxel.z; // z = 6.54</span><br><span class="line"></span><br><span class="line">ES6代码如下</span><br><span class="line">  const &#123; x, y, z &#125; = voxel; // x = 3.6, y = 7.4, z = 6.54</span><br></pre></td></tr></table></figure>
+</ul>
 </li>
-</ol>
-<ol start="7">
-<li><p>解构数组，例子:交换变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a = 8, b = 6;</span><br><span class="line">(() =&gt; &#123;</span><br><span class="line">  [b,a] =[a,b];</span><br><span class="line">&#125;)();</span><br><span class="line">console.log(a); // a等于 6</span><br><span class="line">console.log(b); // b等于 8</span><br></pre></td></tr></table></figure>
+<li><p>BFC是什么<br>BFC是Block Formatting Context，即块级语义化上下文，是关于CSS渲染的一个概念。<br>概念：垂直方向的边距会重叠,BFC是一个区域，与外部的元素互不影响，浮动元素会参与BFC的高度计算</p>
+<ul>
+<li>创建BFC的方式有以下几种<ul>
+<li>float值不为none</li>
+<li>position的值不为static、relative</li>
+<li>overflow不为visiable</li>
+<li>display为inline-block、table-cell、table-caption、flex、inline-flex</li>
+</ul>
 </li>
-</ol>
-<ol start="8">
-<li>使用了模板字面量创建字符串<br>使用了${variable}语法是一个占位符，使用反引号（`），将字符串包裹起来。 </li>
+</ul>
+</li>
+<li><p>你知道多少Doctype文档类型？<br>&emsp;该标签可声明三种文档类型，分别是严格版本，过渡版本以及基于框架的 HTML 文档<br><br></p>
+</li>
+<li>如何实现浏览器内多个标签页之间的通信?<br>&emsp;调用localstorge、cookies等本地存储方式<br><br></li>
+<li>你如何对网站的文件和资源进行优化？<br>文件合并<br>文件最小化/文件压缩<br>使用 CDN 托管<br>缓存的使用（多个域名来提供缓存）<br><br></li>
+<li><p>请说出三种减少页面加载时间的方法。<br>减少HTTP请求<br>资源文件压缩<br>图片在服务器中获取</p>
+<h3 id="JS部分"><a href="#JS部分" class="headerlink" title="JS部分"></a>JS部分</h3></li>
+<li><p>null和undefined的区别<br>&emsp;undefined是一个表示”无”的原始值，转为数值时为 当声明的变量还未被初始化时，变量的默认值为null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。<br>a. 变量被声明了，但没有赋值时，就等于undefined。<br>b. 调用函数时，应该提供的参数没有提供，该参数等于undefined。<br>c. 对象没有赋值的属性，该属性的值为undefined。<br>d. 函数没有返回值时，默认返回undefined。 </p>
+</li>
+<li><p>new操作符<br>· 创造一个空的对象，并且this变量指向该对象，同时继承该函数的原型<br>· 属性和方法被加入到 this 引用的对象中。<br>· 新创建的对象由 this 所引用，并且最后隐式的返回 this 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj  = &#123;&#125;;</span><br><span class="line">obj.__proto__ = Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>事件的级别：DOM0 DOM2 DOM3<br><br></p>
+</li>
+<li><p>类的继承</p>
+<ul>
+<li>借助构造函数</li>
+<li>借助原型链</li>
+<li>组合方式继承</li>
+</ul>
+</li>
+<li><p>什么是闭包</p>
+</li>
+<li><p>同步和异步的区别?</p>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3></li>
+<li>HTTP有几种请求方法，HEAD方法是怎么样的<br>GET/POST/DELETE/PUT/HEAD<br>HEAD方式是跟HTTP请求与GET方式一致，只不过响应体不会被返回；</li>
+<li><p>HTTP状态码<br>1xx：表示信息已经接收<br>2xx：成功<br>· 200：OK，请求成功<br>· 206：带有Range头的GET请求（一般是音频地址）<br>3xx：重定向，要完成请求需进一步操作<br>· 301：请求页面转至url地址<br>· 302：转移到临时地址<br>· 304：浏览器有缓存<br>4xx：客户端错误<br>· 400：客户端语法有错误<br>· 401：未经授权<br>· 403：禁止访问<br>· 404：请求资源不存在<br>5xx：服务器错误<br>· 500：有错误<br>· 503：服务器过载<br>3.什么是管线化<br>持久连接是HTTP1.1版本支持。<br>管线化是在持久连接的基础上把请求一次打包。</p>
+<h3 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h3></li>
+<li>什么是同源策略及限制<br>同源策略限制从一个源加载资源如何与来自另一个源的资源进行交互。</li>
+<li>什么是跨域<br>只要协议、域名、端口三个中有一个不一样就属于跨域</li>
+<li>前后端如何通信？<br>AJAX、WebSocket、CORS</li>
+<li><p>跨域通信<br>JSONP/Hash/postMessage(HTML5)/WebSocket/</p>
+<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3></li>
+<li>CORF(Cross-site request forgery):跨站请求伪造<br>攻击原理：借口漏洞，同时用户也要登录<br>防御措施：Token验证，Refer验证，隐藏令牌</li>
+<li>XSS(Cross-site scripting):跨站脚本攻击<br>攻击原理：向页面注入脚本</li>
 </ol>
 
       
@@ -467,7 +505,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+            <a href="/tags/前端-面试/" rel="tag"># -前端 -面试</a>
           
         </div>
       
@@ -480,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/18/博客/" rel="next" title="hexo + gitpage搭建博客">
-                <i class="fa fa-chevron-left"></i> hexo + gitpage搭建博客
+              <a href="/2019/01/28/es6学习/" rel="next" title="es6学习">
+                <i class="fa fa-chevron-left"></i> es6学习
               </a>
             
           </div>
@@ -489,10 +527,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/17/前端面试题/" rel="prev" title="前端面试题">
-                前端面试题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -653,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）前言"><span class="nav-number">1.</span> <span class="nav-text">1）前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）ES6的不同之处"><span class="nav-number">2.</span> <span class="nav-text">2）ES6的不同之处</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML部分-CSS部分"><span class="nav-number">1.</span> <span class="nav-text">HTML部分/CSS部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS部分"><span class="nav-number">2.</span> <span class="nav-text">JS部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">3.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通信"><span class="nav-number">4.</span> <span class="nav-text">通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全"><span class="nav-number">5.</span> <span class="nav-text">安全</span></a></li></ol></div>
             
 
           </div>
