@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="shiyi&#39;s blog">
 <meta property="og:description" content="前言开始要找实习了，刷了一点面试题目，把自己感觉要记住的记录下来。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-17T14:25:21.598Z">
+<meta property="og:updated_time" content="2019-02-18T06:25:18.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试题">
 <meta name="twitter:description" content="前言开始要找实习了，刷了一点面试题目，把自己感觉要记住的记录下来。">
@@ -472,8 +472,23 @@
 </li>
 <li><p>同步和异步的区别?</p>
 <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3></li>
-<li>HTTP有几种请求方法，HEAD方法是怎么样的<br>GET/POST/DELETE/PUT/HEAD<br>HEAD方式是跟HTTP请求与GET方式一致，只不过响应体不会被返回；</li>
-<li><p>HTTP状态码<br>1xx：表示信息已经接收<br>2xx：成功<br>· 200：OK，请求成功<br>· 206：带有Range头的GET请求（一般是音频地址）<br>3xx：重定向，要完成请求需进一步操作<br>· 301：请求页面转至url地址<br>· 302：转移到临时地址<br>· 304：浏览器有缓存<br>4xx：客户端错误<br>· 400：客户端语法有错误<br>· 401：未经授权<br>· 403：禁止访问<br>· 404：请求资源不存在<br>5xx：服务器错误<br>· 500：有错误<br>· 503：服务器过载<br>3.什么是管线化<br>持久连接是HTTP1.1版本支持。<br>管线化是在持久连接的基础上把请求一次打包。</p>
+<li>HTTP是Hyper Text Transfer Protocol(超文本传输协议的缩写)，是一个基于TCP/IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）的请求应答协议。</li>
+<li><p>HTTP的特点：简单快速，灵活，无状态，无连接</p>
+</li>
+<li><p>HTTP有几种请求方法，HEAD方法是怎么样的</p>
+</li>
+</ol>
+<ul>
+<li>GET:请求指定的页面信息，并返回实体主体。</li>
+<li>POST:向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。</li>
+<li>HEAD:类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头</li>
+<li>PUT:从客户端向服务器传送的数据取代指定的文档的内容。</li>
+<li>DELETE:请求服务器删除指定的页面。</li>
+</ul>
+<ol start="4">
+<li>HTTP状态码<br>1xx：表示信息已经接收<br>2xx：成功<br>· 200：OK，请求成功<br>· 206：带有Range头的GET请求（一般是音频地址）<br>3xx：重定向，要完成请求需进一步操作<br>· 301：请求页面转至url地址<br>· 302：转移到临时地址<br>· 304：浏览器有缓存<br>4xx：客户端错误<br>· 400：客户端语法有错误<br>· 401：未经授权<br>· 403：禁止访问<br>· 404：请求资源不存在<br>5xx：服务器错误<br>· 500：有错误<br>· 503：服务器过载</li>
+<li>HTTP和HTTPS的区别<br>HTTPS是HTTP协议的安全版本，HTTP协议的数据传输是明文的，是不安全的,HTTPS使用了SSL/TLS协议进行加密处理。<br><br></li>
+<li><p>什么是管线化<br>持久连接是HTTP1.1版本支持。<br>管线化是在持久连接的基础上把请求一次打包。</p>
 <h3 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h3></li>
 <li>什么是同源策略及限制<br>同源策略限制从一个源加载资源如何与来自另一个源的资源进行交互。</li>
 <li>什么是跨域<br>只要协议、域名、端口三个中有一个不一样就属于跨域</li>
